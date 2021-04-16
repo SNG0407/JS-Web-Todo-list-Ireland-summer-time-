@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SNG's web Stie" name="Author" content="SNG">
+	<link rel="shortcut icon" type="image/x-icon" href="images/S-icon.ico">
+    <title>Soogle</title>
+    <script src="https://kit.fontawesome.com/4f42a49236.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" >
+    <link rel="stylesheet" href="Search&Todo.css">
+</head>
+<body>
+    <div class="navBox">
+        
+    </div>
+
+    <div class="whole-container">
+        <header class="main-header">
+            <div class="clock">
+                <div class="clock-korea">
+                    <div class="where">Korea  </div><h1 class="realTime">00:00</h1>
+                </div><br>
+                <div class="clock-ireland">
+                    <div class="where">Ireland</div><h1 class="realTime">00:00</h1>
+                    <div class="summerTime">🔆</div>
+                    <span class="summerOnOff">ON</span>
+                </div>
+               
+            </div>
+        </header>
+        <div class="search">
+            <div class="mx-auto headName">
+                <h1 class="mt-5 soogleLogo"><span style="color: #4285f4;">S</span><span style="color: #ea4335;">o</span><span style="color: #fbbc05;">o</span><span style="color: #6cbd40;">g</span><span style="color: #fbbc05;">l</span><span style="color: #ea4335;">e</span></h1>
+            </div>
+            <div class="question">
+                <form action="https://www.google.com/search" method="GET">
+                    <div class="search_box">
+                        <input 
+                        autocomplete="off"
+                        type="text" name="q" 
+                        class="search_txt" 
+                        placeholder="What are you looking for ?"
+                        />
+                        <a class="search_btn">
+                        <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="todoList off">
+            <div id="todo-btn" class="toDo_btn hearderTodo">
+                <i class="fas fa-chevron-circle-right " id="todoClick1"></i>
+                <i class="fa fa-refresh" id="refreshBtn"></i>
+                <div id="date"></div>
+            </div>  
+           <div class="contentTodo">
+                <ul class="todo-ul listTodo">
+                   
+                </ul>
+           </div>
+           <div class="add-to-do">
+               <i class="fa fa-plus-circle"></i>
+                <form class="todoForm">
+                    <!-- <input type="text" style="display:none;"/> -->
+                   <input autocomplete="off" type="text" id="input" placeholder="Add a to-do">
+                </form>    
+           </div>
+        </div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="clock1.js"></script>
+    <script src="todoList.js"></script>
+    <script src="animation.js"></script>
+    <script src="summerTime.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,404 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    /* background: linear-gradient(#e66465, 50%, orange); */
+    background: linear-gradient(#ffbfbf, 50%, #15c4b6);
+    background-color: orange;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}
+
+/* navigation bar */
+.navBox{ 
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-weight: bold; 
+    font-family: 'NEXON Lv2 Gothic Bold'; 
+    font-size:1.5em; margin:5px; 
+} 
+.iconBtn{ 
+    width:35px; cursor:pointer;
+}
+/* clock */
+.whole-container {
+    margin: 0;
+    height: 754.4px;
+    width: 100%;
+}
+.main-header {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    /* border: 1px solid aquamarine; */
+    text-align: center;
+}
+
+.clock-ireland {
+    position: relative;
+}
+
+.summerOnOff {
+    position: absolute;
+    right: 3px;
+    bottom: 33px;
+    color:#222;
+}
+.summerOn{
+    color:#f1e000;
+}
+.summerTime {
+    align-items: center;
+    display: inline;
+    position: absolute;
+    right: 3px;
+    bottom: 7px;
+    color: rosybrown;
+    background-color:#222;
+    border-radius: 10px;
+}
+
+.summerClicked {
+    background-color: #f1e000;
+    padding: 0px;
+    
+}
+
+.clock {
+    position: absolute;
+    transform:translate(-50%, -50%);
+    min-width: 312px;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    border: 1px solid rgb(1, 5, 4);
+    
+    background: #222;
+    color: #eee;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 7px #222;
+    text-shadow: 0 0 3px #fff;
+}
+
+.where {
+    display: inline;
+    width: 50px;
+    padding: 10px;
+}
+
+.realTime {
+    display: inline;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid rgb(255, 238, 4); */
+    text-align: center;
+}
+
+/* 서치 박스 */
+.soogleLogo{
+    padding: 37px;
+    font-size: 72px;
+    text-align: center;
+    line-height: 0;
+    font-family: "Sofia", sans-serif;
+    font-weight: 700;
+    word-spacing: 100px;
+}
+.search_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height:40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search_box:hover > .search_txt {
+width: 240px;
+padding: 0 6px;
+}
+
+.search_box:hover > .search_btn {
+    background-image: linear-gradient(315deg,#2AF598 0%,#08AEEA 100%);
+  /*  background: rgba(255,255,255,.6); */
+   color: #2f3640;
+  }
+
+  
+  .search_btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+   }
+   
+   .search_btn > i {
+    font-size: 30px;
+   }
+   
+   .search_txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+   }
+   
+
+   
+   /* ToDo List */
+.todoList {
+    position: absolute;
+    bottom: 13px;
+    left: 10px;
+    width: 300px;
+    height: 75%;
+    min-height: 387px;
+    background: white;
+    opacity: 90%;
+    border-radius: 12px;
+    transition: right 0.3s ease-in-out;
+    animation: colorchange;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+#dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.5 );
+}
+
+/* @keyframes colorchange {
+    from {background-color: crimson; left: -200px;}
+    to {background-color: darkgoldenrod; left: 0px}
+} */
+
+#todo-btn {
+    text-align: right;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 140px;
+    /* background: aquamarine; */
+    background-image: url('https://raw.githubusercontent.com/CodeExplainedRepo/To-Do-List/master/img/bg1.jpg');
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+#signBtn {
+    width: 25px;
+    height: 25px;
+}
+
+.contentTodo{
+    height: 61px;
+    /* background: aqua; */
+    position: relative;
+    height: 65%;
+    overflow: auto;
+}
+
+.contentTodo::-webkit-scrollbar { 
+    display: none; 
+}
+.contentTodo ul{
+    padding:0;
+    margin:0;
+}
+
+#todoClick1{
+    position: absolute;
+    top: 6px;
+    right: -36px;
+    padding: 1px;
+    font-size: 2rem;
+    color: rgb(19 171 208);
+    background: #fff8dc00;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+#todoClick1:hover {
+    color: black;
+}
+
+#refreshBtn {
+    position: absolute;
+    top: 11px;
+    right: 13px;
+    padding: 0px;
+    /* font-size: 2rem; */
+    /* color: ; */
+    background: #fff8dc00;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#refreshBtn :hover{
+    cursor: pointer;
+    color:  rgb(255, 255, 255);
+
+}
+
+.todoList.off {
+    left: -290px;
+}
+.todo-ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.add-item {
+    position: absolute;
+    bottom: 12px;
+}
+
+
+#date{
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+ul{
+    list-style:none;
+    }
+
+    /* 아이템 리스트 */
+.todo-li i{
+    display: inline;
+}
+
+.todo-li{
+    width:300px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.todo-li i.co{
+    position: absolute;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+}
+.todo-li i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+.todo-li p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:50px;
+    top:9px;
+    background-color: #FFF;
+    max-width:285px;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.todo-li i.de{
+    position: absolute;
+    font-size: 25px;
+    right:15px;
+    top:10px;
+}
+.todo-li i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+
+/* add-to-do */
+.add-to-do{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:40px;
+    background-color: #FFF;
+    padding: 0px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: absolute;
+    font-size: 40px;
+    color: #4162f6;
+}
+
+.add-to-do input{
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 72%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left:10px;
+}
+.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-moz-placeholder { /* Firefox 18- */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+
